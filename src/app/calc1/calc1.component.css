@@ -1,0 +1,17 @@
+button
+{
+  height:60px;
+  width:60px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+}
+input
+{
+  height:30px;
+  width:236px;
+  text-align: right;
+  font-weight: bolder;
+  font-size: 20px;
+}

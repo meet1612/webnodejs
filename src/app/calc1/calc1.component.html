@@ -1,0 +1,21 @@
+<input #t1>
+<br>
+<button (click)="t1.value=t1.value+1;">1</button>
+<button (click)="t1.value=t1.value+2;">2</button>
+<button (click)="t1.value=t1.value+3;">3</button>
+<button (click)="onclickplus(t1.value)" (click)="t1.value=''">+</button>
+<br>
+<button (click)="t1.value=t1.value+4;">4</button>
+<button (click)="t1.value=t1.value+5;">5</button>
+<button (click)="t1.value=t1.value+6;">6</button>
+<button (click)="onclicksub(t1.value)" (click)="t1.value=''">-</button>
+<br>
+<button (click)="t1.value=t1.value+7;">7</button>
+<button (click)="t1.value=t1.value+8;">8</button>
+<button (click)="t1.value=t1.value+9;">9</button>
+<button (click)="onclickmul(t1.value)" (click)="t1.value=''">*</button>
+<br>
+<button (click)="t1.value='';">CE</button>
+<button (click)="t1.value=t1.value+0">0</button>
+<button (click)="onclickequ(t1.value)" (click)="t1.value=ans">=</button>
+<button (click)="onclickdiv(t1.value)" (click)="t1.value=''">/</button>

@@ -1,0 +1,24 @@
+<h1>hello from meet</h1>
+<br>
+<h1>{{a}}</h1>
+<br>
+<h1>{{x}}</h1>
+<br>
+<input #txtnumber1 type="number">
+<br>
+<br>
+<input #txtnumber2 type="number">
+<br>
+<br>
+<button (click)="onclick(txtnumber1.value,txtnumber2.value)">ADD</button>
+<button (click)="onclick1(txtnumber1.value,txtnumber2.value)">SUB</button>
+<button (click)="onclick2(txtnumber1.value,txtnumber2.value)">MUL</button>
+<button (click)="onclick3(txtnumber1.value,txtnumber2.value)">DIV</button>
+<h1>Answer is : {{ans}}</h1>
+
+<h1 *ngIf="f">it is visible</h1>
+
+<button (click)="onvisible()">Click me!</button>
+<br>
+<input [(ngModel)]="str">
+<h1>{{str}}</h1>

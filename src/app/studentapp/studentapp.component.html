@@ -1,0 +1,84 @@
+<div class="container"><h1>STUDENT INFORMATION APP</h1></div>
+<hr>
+
+<button (click)="onaddclick()" style="margin-left: 1150px;" type="button" class="btn btn-default" aria-label="Left Align">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</button>
+<br>
+<br>
+<div *ngIf="flag" class="container">
+<div class="form-group"><input class="form-control" type="number" placeholder="Enter ROLL NO" [(ngModel)]="rollno"> </div>
+
+<div class="form-group"><input class="form-control" type="text" placeholder="Enter NAME" [(ngModel)]="name"></div>
+
+<div class="form-group"><input class="form-control" type="number" placeholder="Enter MO NO" [(ngModel)]="mob"> </div>
+
+<div><b>Gender:-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            MALE<input type="radio" name="rdo1" value="MALE" [(ngModel)]="rbtn1" >
+            FEMALE<input type="radio" name="rdo1" value="FEMALE" [(ngModel)]="rbtn1" ></b></div>
+<br>
+
+<div><b>Hobbies:-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    SPORT<input type="checkbox" value="sport" name="c1" [(ngModel)]="cb1">&nbsp;&nbsp;&nbsp;
+     DRAWING<input type="checkbox" [(ngModel)]="cb2" name="c2" value="drawing"> &nbsp;&nbsp;&nbsp;
+      OTHER<input type="checkbox" [(ngModel)]="cb3" name="c3" value="other"></b> </div>
+<br>
+      <div class="form-group"><select class="form-control" [(ngModel)]="cit">
+  <option *ngFor="let item of citarr">{{item}}</option>
+</select></div>
+<div class="form-group"><input class="form-control" type="number" placeholder="Enter Fees" [(ngModel)]="fee"> </div>
+<br>
+<div class="row">
+    <div class="col-md-6">
+            <button class="btn btn-lg btn-primary form-control" (click)="onAdd()" >ADD</button>
+    </div>
+    <div class="col-md-6">
+            <button class="btn btn-lg btn-danger form-control" (click)="flag=false" >CANCEL</button>
+    </div>
+  </div>
+</div>
+<br>
+<hr>
+<div class="container">
+<table class="table">
+  <thead>
+    <th>
+      ROLL NO
+    </th>
+    <th>
+      NAME
+    </th>
+    <th>
+      MOBILE NO
+    </th>
+    <th>
+      GENDER
+    </th>
+    <th>
+      CITY
+    </th>
+    <th>
+      FEES
+    </th>
+    <th>
+      Action
+    </th>
+  </thead>
+<tr *ngFor="let item of stud">
+  <td>{{item.Id}}</td>
+  <td>{{item.Name}}</td>
+  <td>{{item.Mobile}}</td>
+  <td>{{item.Gender}}</td>
+  <td>{{item.City}}</td>
+  <td>{{item.Fees}}</td>
+
+  <td><button (click)="onDel(item)" type="button" class="btn btn-default" aria-label="Left Align">
+      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+    </button></td>
+</tr>
+</table>
+<div class="container row">
+    <nav class="navbar navbar-inverse">
+
+      </nav>
+</div>

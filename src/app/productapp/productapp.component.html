@@ -1,0 +1,77 @@
+<div class="container"><h1>Product Application</h1>
+  <button (click)="onabc()" style="margin-left: 1020px;" type="button" class="btn btn-default" aria-label="Left Align">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</button>
+</div>
+<br>
+
+<hr>
+<div *ngIf="flag" class="container">
+<div class="form-group"><input class="form-control" type="number" placeholder="ID" [(ngModel)]="txtid"></div>
+<div class="form-group"><input class="form-control" type="text" placeholder="NAME" [(ngModel)]="txtname"></div>
+<div class="form-group"><input class="form-control" type="number" placeholder="PRICE" [(ngModel)]="txtprice"></div>
+<div class="form-group"><input class="form-control" type="text" placeholder="MFG" [(ngModel)]="txtmfg"></div>
+<div class="form-group">
+  <select class="form-control" [(ngModel)]="txtsoh" >
+  <option *ngFor="let item of noarr">{{item}}</option>
+</select></div>
+
+<div class="row">
+  <div class="col-md-6">
+          <button class="btn btn-lg btn-primary form-control" (click)="onAdd()" >ADD</button>
+  </div>
+  <div class="col-md-6">
+          <button class="btn btn-lg btn-danger form-control" (click)="flag=false" >CANCEL</button>
+  </div>
+</div>
+</div>
+<div class="container">
+<h1>DISPLAY PRODUCT LIST</h1>
+<br>
+  <hr>
+  <div class="container">
+
+
+    <div class="row">
+      <div class="col-md-4">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <span class="badge">10</span>
+            laptops
+          </li>
+          <li class="list-group-item">
+            <span class="badge">140</span>
+           mobiles
+          </li>
+          <li class="list-group-item">
+            <span class="badge">50</span>
+           clothes
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+
+          <div *ngFor="let item of prod" class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img src="{{item.Image}}" alt="..." height="200px" width="200px" >
+              <div class="caption">
+                <h3>{{item.Name}}</h3>
+                <p>price:{{item.Price}}</p>
+                <p>stock:{{item.Soh}}</p>
+                <p>
+                    <a  href="#" class="btn btn-primary" role="button">ADD TO CART</a>
+                    <a (click)="onDelete(item)" class="btn btn-default" role="button">DELETE</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <nav class="navbar navbar-inverse">
+      </nav>
+    </div>
+  </div>
+
